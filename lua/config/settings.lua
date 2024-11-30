@@ -4,14 +4,15 @@ vim.g.loaded_netrwPlugin = 1
 
 -- General
 vim.opt.title = true
-vim.wo.number = true
 vim.opt.termguicolors = true
 
 -- Lines
+vim.wo.number = true
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number"
 vim.opt.wrap = false
 vim.opt.scrolloff = 5
+vim.opt.fillchars = { eob = " " }
 
 -- Tabs
 vim.cmd("set expandtab")
