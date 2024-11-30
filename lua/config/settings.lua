@@ -1,5 +1,19 @@
-vim.wo.number = true
+-- Disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
+-- General
+vim.opt.title = true
+vim.wo.number = true
+vim.opt.termguicolors = true
+
+-- Lines
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = "number"
+vim.opt.wrap = false
+vim.opt.scrolloff = 5
+
+-- Tabs
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=4")
 vim.cmd("set softtabstop=4")

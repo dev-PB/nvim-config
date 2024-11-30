@@ -1,6 +1,9 @@
--- Telescope
+-- File Search
 local telescope = require("telescope.builtin")
 vim.keymap.set('n', '<C-p>', telescope.find_files, {})
+
+-- File Explorer
+vim.keymap.set('n', '<C-n>', '<Cmd>NvimTreeToggle<CR>')
 
 -- LSP
 vim.keymap.set('n', 'O', vim.lsp.buf.hover, {})
