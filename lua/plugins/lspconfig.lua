@@ -14,7 +14,9 @@ return {
             require("mason-lspconfig").setup({
                 ensure_installed = {
                     "lua_ls",
-			        "pylint",
+			        "pyright",
+                    "rust_analyzer",
+                    "eslint",
                 },
             })
 

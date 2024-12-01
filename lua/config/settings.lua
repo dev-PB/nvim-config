@@ -5,6 +5,7 @@ vim.g.loaded_netrwPlugin = 1
 -- General
 vim.opt.title = true
 vim.opt.termguicolors = true
+vim.opt.swapfile = false
 
 -- Lines
 vim.wo.number = true

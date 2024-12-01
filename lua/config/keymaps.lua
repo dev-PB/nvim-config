@@ -8,4 +8,8 @@ vim.keymap.set('n', '<C-n>', '<Cmd>NvimTreeToggle<CR>')
 -- LSP
 vim.keymap.set('n', 'O', vim.lsp.buf.hover, {})
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
-vim.keymap.set({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, {})
+vim.keymap.set({'n', 'v'}, '<leader><CR>', vim.lsp.buf.code_action, {})
+
+-- ToggleTerm
+local custom_functions = require("config.custom_functions");
+vim.keymap.set('n', '<C-t>', custom_functions.toggle_or_create_terminal);
