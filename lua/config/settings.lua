@@ -7,6 +7,7 @@ vim.opt.title = true
 vim.opt.termguicolors = true
 vim.opt.swapfile = false
 vim.opt.undofile = true
+vim.opt.guicursor = ""
 
 -- Lines
 vim.wo.number = true
