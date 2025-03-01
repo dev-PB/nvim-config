@@ -19,6 +19,10 @@ return {
                 },
             },
 
+            view = {
+                side = 'right'
+            },
+
             modified = { enable = true, },
 
             renderer = {
