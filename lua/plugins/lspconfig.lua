@@ -14,9 +14,9 @@ return {
             require("mason-lspconfig").setup({
                 ensure_installed = {
                     "lua_ls",
-			        "pyright",
-                    "rust_analyzer",
-                    "eslint",
+                    -- "pyright",
+                    -- "rust_analyzer",
+                    -- "eslint",
                 },
             })
 
@@ -32,9 +32,9 @@ return {
                 end,
 
                 -- Language specific handlers
-                ["rust-analyzer"] = function()
-                    require("rust-tools").setup({})
-                end,
+                -- ["rust-analyzer"] = function()
+                --    require("rust-tools").setup({})
+                -- end,
             })
         end
     },
