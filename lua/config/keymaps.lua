@@ -9,6 +9,7 @@ vim.keymap.set('n', '<C-b>', '<Cmd>NvimTreeToggle<CR>')
 vim.keymap.set('n', '<M-i>', vim.lsp.buf.hover, {})
 vim.keymap.set('n', '<F12>', vim.lsp.buf.definition, {})
 vim.keymap.set({'n', 'v'}, '<M-.>', vim.lsp.buf.code_action, {})
+vim.keymap.set({'n', 'i'}, '<S-F12>', telescope.lsp_references, {})
 
 -- ToggleTerm
 local custom_functions = require("config.custom_functions");
