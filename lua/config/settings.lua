@@ -8,6 +8,7 @@ vim.opt.termguicolors = true
 vim.opt.swapfile = false
 vim.opt.undofile = true
 vim.opt.guicursor = ""
+vim.opt.colorcolumn = "120"
 
 -- Lines
 vim.wo.number = true
