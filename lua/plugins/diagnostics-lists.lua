@@ -1,6 +1,13 @@
 return {
     "folke/trouble.nvim",
-    opts = {}, -- for default options, refer to the configuration section for custom setup.
+    opts = {
+      ---@type trouble.Window.opts
+      win = {
+        wo = {
+          colorcolumn = "",
+        },
+      },
+    }, -- for default options, refer to the configuration section for custom setup.
     cmd = "Trouble",
     keys = {
       {
