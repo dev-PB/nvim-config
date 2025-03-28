@@ -8,9 +8,20 @@ return {
 		config.setup({
 			ensure_installed = {
 				"lua",
-				"html",
+				"c_sharp",
+				"python",
+				"rust",
 				"javascript",
-				"rust"
+				"typescript",
+				"powershell",
+				"sql",
+				"html",
+				"razor",
+				"css",
+				"scss",
+				"json",
+				"xml",
+				"toml",
 			},
 
 			highlight = { enable = true},
