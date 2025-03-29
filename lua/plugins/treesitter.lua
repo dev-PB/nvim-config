@@ -1,4 +1,5 @@
 return {
+    {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
 	
@@ -28,4 +29,11 @@ return {
 			indent = { enable = true },
 		})
 	end
+    },
+    {
+        'HiPhish/rainbow-delimiters.nvim',
+        lazy = false,
+        main = 'rainbow-delimiters.setup',
+        opts = {},
+    }
 }
