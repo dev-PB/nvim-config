@@ -16,7 +16,21 @@ return {
                         require("telescope.themes").get_dropdown {
                         }
                     }
-                }
+                },
+
+                pickers = {
+                    buffers = {
+                        mappings = {
+                            n = {
+                                ['d'] = 'delete_buffer'
+                            },
+
+                            i = {
+                                ['<c-d>'] = 'delete_buffer'
+                            },
+                        },
+                    },
+                },
             }
 
             require("telescope").load_extension("ui-select")
