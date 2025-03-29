@@ -1,13 +1,13 @@
 return {
     {
-		'projekt0n/github-nvim-theme',
-		name = 'github-theme',
+		'Mofiqul/vscode.nvim',
+		name = 'vscode',
 		lazy = false,
 
         config = function()
-			require('github-theme').setup()
+			require('vscode').setup()
 
-			vim.cmd.colorscheme "github_dark_dimmed"
+			vim.cmd.colorscheme "vscode"
 		end
 	},
 }
