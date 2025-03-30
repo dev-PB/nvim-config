@@ -1,118 +1,41 @@
 return {
-    {
-        "hrsh7th/cmp-nvim-lsp",
-    },
+	'saghen/blink.cmp',
+	dependencies = { 'rafamadriz/friendly-snippets' },
+	version = '1.*',
 
-	{
-		"L3MON4D3/LuaSnip",
+	---@module 'blink.cmp'
+	---@type blink.cmp.Config
+	opts = {
+		-- All presets have the following mappings:
+		-- C-space: Open menu or open docs if already open
+		-- C-n/C-p or Up/Down: Select next/previous item
+		-- C-e: Hide menu
+		-- C-k: Toggle signature help (if signature.enabled = true)
 
-		dependencies = {
-			"saadparwaiz1/cmp_luasnip",
-			"rafamadriz/friendly-snippets",
+		-- Enter to accept suggestion
+		-- Tab & Shift-Tab to scroll through them
+		keymap = {
+			preset = 'enter',
+			["<Tab>"] = { "select_next", "fallback" },
+			["<S-Tab>"] = { "select_prev", "fallback" },
 		},
-	},
 
-    {
-		"hrsh7th/nvim-cmp",
+		appearance = {
+			nerd_font_variant = 'normal'
+		},
 
-		config = function()
-			-- Set up nvim-cmp.
-			local cmp = require'cmp'
-			local luasnip = require'luasnip'
+		completion = {
+			documentation = {
+				auto_show = true
+			},
+		},
 
-			require("luasnip.loaders.from_vscode").lazy_load()
+		sources = {
+			default = { 'lsp', 'path', 'snippets', 'buffer' },
+		},
 
-			cmp.setup({
-				snippet = {
-					-- REQUIRED - you must specify a snippet engine
-					expand = function(args)
-						require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-					end,
-				},
+		fuzzy = { implementation = "prefer_rust_with_warning" }
+		},
 
-				window = {
-					completion = cmp.config.window.bordered(),
-					documentation = cmp.config.window.bordered(),
-				},
-
-				mapping = cmp.mapping.preset.insert({
-					['<C-Space>'] = cmp.mapping.complete(),
-					['<C-e>'] = cmp.mapping.abort(),
-					['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-
-					["<Tab>"] = cmp.mapping(
-						function(fallback)
-							if cmp.visible() then
-								cmp.select_next_item()
-							elseif luasnip.expand_or_jumpable() then
-								luasnip.expand_or_jump()
-							else
-								fallback()
-							end
-						end,
-						{"i", "s"}
-					),
-
-					["<S-Tab>"] = cmp.mapping(
-						function(fallback)
-							if cmp.visible() then
-								cmp.select_prev_item()
-							elseif luasnip.jumpable(-1) then
-								luasnip.jump(-1)
-							else
-								fallback()
-							end
-						end,
-						{"i", "s"}
-					),
-                }),
-
-				sources = cmp.config.sources(
-					{
-						{ name = 'nvim_lsp' },
-						{ name = 'luasnip' }, -- For luasnip users.
-					},
-
-					{
-						{ name = 'buffer' },
-				})
-			})
-
-			-- To use git you need to install the plugin petertriho/cmp-git and uncomment lines below
-			-- Set configuration for specific filetype.
-			--[[ cmp.setup.filetype('gitcommit', {
-				sources = cmp.config.sources({
-					{ name = 'git' },
-				}, {
-					{ name = 'buffer' },
-				})
-			})
-			require("cmp_git").setup() ]]-- 
-
-			-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
-			cmp.setup.cmdline(
-				{ '/', '?' },
-				{
-					mapping = cmp.mapping.preset.cmdline(),
-					sources = {
-						{ name = 'buffer' }
-					}
-				})
-
-			-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-			cmp.setup.cmdline(':', {
-				mapping = cmp.mapping.preset.cmdline(),
-				sources = cmp.config.sources(
-					{
-						{ name = 'path' }
-					},
-					{
-						{ name = 'cmdline' }
-					}
-				),
-
-				matching = { disallow_symbol_nonprefix_matching = false }
-			})
-		end,
-    }
-}
+		opts_extend = { "sources.default" }
+  }

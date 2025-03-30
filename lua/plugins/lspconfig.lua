@@ -20,8 +20,8 @@ return {
                 },
             })
 
-            -- Hook up completions to the LSPs, see autocomplete.lua
-            local capabilities = require("cmp_nvim_lsp").default_capabilities()
+            local default_capabilities = vim.lsp.protocol.make_client_capabilities()
+            local capabilities = require('blink.cmp').get_lsp_capabilities(default_capabilities)
 
             require("mason-lspconfig").setup_handlers({
                 -- Default LSP handler
