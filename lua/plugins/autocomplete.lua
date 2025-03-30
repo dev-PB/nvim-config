@@ -26,7 +26,15 @@ return {
 
 		completion = {
 			documentation = {
-				auto_show = true
+				auto_show = true,
+
+				window = {
+					border = "rounded",
+				},
+			},
+
+			menu = {
+				border = "rounded",
 			},
 		},
 
@@ -37,5 +45,5 @@ return {
 		fuzzy = { implementation = "prefer_rust_with_warning" }
 		},
 
-		opts_extend = { "sources.default" }
+		opts_extend = { "sources.default" },
   }
