@@ -9,6 +9,7 @@ vim.opt.swapfile = false
 vim.opt.undofile = true
 vim.opt.guicursor = ""
 vim.opt.colorcolumn = "120"
+vim.opt.clipboard = "unnamedplus"
 
 -- Lines
 vim.wo.number = true
