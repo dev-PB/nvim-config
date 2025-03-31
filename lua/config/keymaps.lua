@@ -16,3 +16,7 @@ vim.keymap.set({'n', 'i'}, '<S-F12>', telescope.lsp_references, { desc = "Find R
 local custom_functions = require("config.custom_functions");
 vim.keymap.set('n', '<C-n>', custom_functions.toggle_or_create_terminal, { desc = "Open the terminal"} );
 vim.api.nvim_set_keymap('t', '<C-n>', '<C-\\><C-n>:ToggleTerm<CR>', {noremap = true, silent = true})
+
+-- Comments
+vim.keymap.set('v', '<C-_>', "gc", { remap = true, desc = "Toggle comment" })
+vim.keymap.set('n', '<C-_>', "gcc", { remap = true, desc = "Toggle comment" })
