@@ -20,3 +20,6 @@ vim.api.nvim_set_keymap('t', '<C-n>', '<C-\\><C-n>:ToggleTerm<CR>', {noremap = t
 -- Comments
 vim.keymap.set('v', '<C-_>', "gc", { remap = true, desc = "Toggle comment" })
 vim.keymap.set('n', '<C-_>', "gcc", { remap = true, desc = "Toggle comment" })
+
+-- Delete last word in insert mode, <C-H> = <C-BS>
+vim.keymap.set('i', '<C-H>', "<C-W>", {})
