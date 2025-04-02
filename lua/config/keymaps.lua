@@ -49,3 +49,7 @@ vim.keymap.set('n', '<M-Up>', ':resize +2<CR>', { noremap = true, silent = true 
 vim.keymap.set('n', '<M-Down>', ':resize -2<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<M-Left>', ':vertical resize -2<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<M-Right>', ':vertical resize +2<CR>', { noremap = true, silent = true })
+
+-- Save shortcut, :update only saves if there's been changes
+vim.keymap.set('n', '<C-s>', ':update<CR>', { noremap = true, silent = true })
+vim.keymap.set('i', '<C-s>', '<Cmd>:update<CR>', { noremap = true, silent = true })
