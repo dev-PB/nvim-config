@@ -53,3 +53,6 @@ vim.keymap.set('n', '<M-Right>', ':vertical resize +2<CR>', { noremap = true, si
 -- Save shortcut, :update only saves if there's been changes
 vim.keymap.set('n', '<C-s>', ':update<CR>', { noremap = true, silent = true })
 vim.keymap.set('i', '<C-s>', '<Cmd>:update<CR>', { noremap = true, silent = true })
+
+-- From normal mode, add a new line below & enter insert mode
+vim.keymap.set('n', '<CR>', 'o', { noremap = true, silent = true })
