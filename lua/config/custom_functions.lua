@@ -6,7 +6,7 @@ return {
         local buffers = vim.api.nvim_list_bufs()
 
         local has_toggleterm = false
-        
+
         for _, buf in ipairs(buffers) do
             local buf_name = vim.api.nvim_buf_get_name(buf)
 
@@ -20,5 +20,9 @@ return {
             vim.cmd([[ exe 1 . "ToggleTerm" ]])
         end
 
-    end
+    end,
+
+    toggle_relative_numbers = function()
+        vim.wo.relativenumber = not vim.wo.relativenumber
+    end,
 }

@@ -56,3 +56,6 @@ vim.keymap.set('i', '<C-s>', '<Cmd>:update<CR>', { noremap = true, silent = true
 
 -- From normal mode, add a new line below & enter insert mode
 vim.keymap.set('n', '<CR>', 'o', { noremap = true, silent = true })
+
+-- Toggle relative line numbers
+vim.keymap.set('n', '<Leader>r', custom_functions.toggle_relative_numbers, { noremap = true, silent = true, desc = "Toggle relative line numbers" })
