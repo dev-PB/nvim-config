@@ -66,3 +66,6 @@ vim.keymap.set('n', '<Leader>r', custom_functions.toggle_relative_numbers, { nor
 
 -- Toggle hybrid mode (Markview)
 vim.keymap.set('n', '<Leader>mh', '<Cmd>Markview hybridToggle<CR>', { noremap = true, silent = true, desc = "Toggle Hybrid mode (Markview)" })
+
+-- Select all
+vim.keymap.set('n', '<C-a>', 'ggVG', { silent = true })
