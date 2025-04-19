@@ -8,8 +8,6 @@ return {
 
     opts = {
         preview = {
-            enable_hybrid_mode = true,
-            hybrid_modes = {"n"}
         },
 
         markdown = {
