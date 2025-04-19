@@ -63,3 +63,6 @@ vim.keymap.set({'n', 'i'}, '<C-z>', '<Cmd>u<CR>', { noremap = true, silent = tru
 
 -- Toggle relative line numbers
 vim.keymap.set('n', '<Leader>r', custom_functions.toggle_relative_numbers, { noremap = true, silent = true, desc = "Toggle relative line numbers" })
+
+-- Toggle hybrid mode (Markview)
+vim.keymap.set('n', '<Leader>mh', '<Cmd>Markview hybridToggle<CR>', { noremap = true, silent = true, desc = "Toggle Hybrid mode (Markview)" })
