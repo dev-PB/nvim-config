@@ -23,8 +23,9 @@ vim.api.nvim_set_keymap('t', '<C-n>', '<C-\\><C-n><Cmd>ToggleTerm<CR>', { norema
 vim.keymap.set('v', '<C-_>', "gc", { remap = true, silent = true, desc = "Toggle comment" })
 vim.keymap.set('n', '<C-_>', "gcc", { remap = true, silent = true, desc = "Toggle comment" })
 
--- Delete last word in insert mode, <C-H> = <C-BS>
+-- Delete last word, <C-H> = <C-BS>
 vim.keymap.set('i', '<C-H>', "<C-W>", { noremap = true, silent = true })
+vim.keymap.set('n', '<C-H>', "db", { noremap = true, silent = true })
 
 -- Move text up/down
 vim.keymap.set({'n', 'i'}, '<M-j>', '<Cmd>m +1<CR>', { noremap = true, silent = true, desc = "Move line down" })
