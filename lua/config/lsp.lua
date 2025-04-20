@@ -1,0 +1,5 @@
+vim.lsp.enable("lua_ls")
+vim.lsp.enable("rust_analyzer")
+vim.lsp.enable("omnisharp")
+vim.lsp.enable("pyright")
+vim.lsp.enable("ts_ls")
