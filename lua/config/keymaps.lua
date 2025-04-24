@@ -70,3 +70,7 @@ vim.keymap.set('n', '<Leader>mh', '<Cmd>Markview hybridToggle<CR>', { noremap = 
 
 -- Select all
 vim.keymap.set('n', '<C-a>', 'ggVG', { silent = true })
+
+-- Go to first/last line
+vim.keymap.set({'n', 'v'}, '<', 'gg', { silent = true })
+vim.keymap.set({'n', 'v'}, '>', 'G', { silent = true })
