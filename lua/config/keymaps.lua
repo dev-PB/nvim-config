@@ -3,21 +3,11 @@ local telescope = require("telescope.builtin")
 vim.keymap.set('n', '<C-t>', telescope.find_files, { desc = "Find Files" })
 vim.keymap.set('n', '<Leader>t', telescope.buffers, { desc = "Find Buffers" })
 
--- File Explorer
-vim.keymap.set('n', '<C-b>', '<Cmd>NvimTreeToggle<CR>')
-
 -- LSP
 vim.keymap.set('n', '<M-i>', vim.lsp.buf.hover, { desc = "Hover" })
 vim.keymap.set('n', '<F12>', vim.lsp.buf.definition, { desc = "Go to Definition"} )
 vim.keymap.set({'n', 'v'}, '<M-.>', vim.lsp.buf.code_action, { desc = "Code Actions"} )
 vim.keymap.set({'n', 'i'}, '<S-F12>', telescope.lsp_references, { desc = "Find References"} )
-
--- Open ToggleTerm
-local custom_functions = require("config.custom_functions");
-vim.keymap.set('n', '<C-n>', custom_functions.toggle_or_create_terminal, { desc = "Open the terminal" });
-
--- Exit ToggleTerm
-vim.api.nvim_set_keymap('t', '<C-n>', '<C-\\><C-n><Cmd>ToggleTerm<CR>', { noremap = true, silent = true })
 
 -- Comments, <C-_> = <C-/>
 vim.keymap.set('v', '<C-_>', "gc", { remap = true, silent = true, desc = "Toggle comment" })
@@ -63,7 +53,7 @@ vim.keymap.set('i', '<NL>', '<C-o>O', { noremap = true, silent = true })
 vim.keymap.set({'n', 'i'}, '<C-z>', '<Cmd>u<CR>', { noremap = true, silent = true })
 
 -- Toggle relative line numbers
-vim.keymap.set('n', '<Leader>r', custom_functions.toggle_relative_numbers, { noremap = true, silent = true, desc = "Toggle relative line numbers" })
+vim.keymap.set('n', '<Leader>r', require("config.custom_functions").toggle_relative_numbers, { noremap = true, silent = true, desc = "Toggle relative line numbers" })
 
 -- Toggle hybrid mode (Markview)
 vim.keymap.set('n', '<Leader>mh', '<Cmd>Markview hybridToggle<CR>', { noremap = true, silent = true, desc = "Toggle Hybrid mode (Markview)" })

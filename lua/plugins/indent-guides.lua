@@ -4,7 +4,10 @@ return {
     ---@module "ibl"
     ---@type ibl.config
     opts = {},
-
+    event = {
+        "BufReadPre",
+        "BufNewFile"
+    },
     config = function()
         require("ibl").setup({
             indent = {
