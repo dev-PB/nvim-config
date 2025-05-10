@@ -39,8 +39,8 @@ vim.keymap.set("n", "<M-Down>", ":resize -2<CR>", { noremap = true, silent = tru
 vim.keymap.set("n", "<M-Left>", ":vertical resize -2<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<M-Right>", ":vertical resize +2<CR>", { noremap = true, silent = true })
 
--- Save shortcut, :update only saves if there's been changes
-vim.keymap.set({ "n", "i" }, "<C-s>", "<Cmd>update<CR>", { noremap = true, silent = true })
+-- Save shortcut, :update only saves if there's been changes, <Esc> to return to normal mode afterwards
+vim.keymap.set({ "n", "i" }, "<C-s>", "<Cmd>update<CR><Esc>", { noremap = true, silent = true })
 
 -- From normal mode, add a new line below/above & enter insert mode, <NL> = <C-CR>
 vim.keymap.set("n", "<CR>", "o", { noremap = true, silent = true })
