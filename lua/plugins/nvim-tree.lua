@@ -1,49 +1,49 @@
 return {
-    "nvim-tree/nvim-tree.lua",
-    version = "*",
+	"nvim-tree/nvim-tree.lua",
+	version = "*",
 
-    dependencies = {
-        "nvim-tree/nvim-web-devicons",
-    },
+	dependencies = {
+		"nvim-tree/nvim-web-devicons",
+	},
 
-    config = function()
-        require("nvim-tree").setup({
-            diagnostics = {
-                enable = true,
-                icons = {
-                    error = "",
-                    warning = "",
-                    info = "",
-                    hint = "",
-                },
-            },
+	config = function()
+		require("nvim-tree").setup({
+			diagnostics = {
+				enable = true,
+				icons = {
+					error = "",
+					warning = "",
+					info = "",
+					hint = "",
+				},
+			},
 
-            modified = { enable = true, },
+			modified = { enable = true },
 
-            renderer = {
-                icons = {
-                    git_placement = "before",
-                    glyphs = {
-                        git = {
-                            unstaged = "",
-                            staged = "",
-                            unmerged = "",
-                            renamed = "",
-                            untracked = "",
-                            deleted = "",
-                            ignored = "",
-                        },
-                    },
-                },
-            },
-        })
-    end,
+			renderer = {
+				icons = {
+					git_placement = "before",
+					glyphs = {
+						git = {
+							unstaged = "",
+							staged = "",
+							unmerged = "",
+							renamed = "",
+							untracked = "",
+							deleted = "",
+							ignored = "",
+						},
+					},
+				},
+			},
+		})
+	end,
 
-    keys = {
-        {
-            '<C-b>',
-            '<Cmd>NvimTreeToggle<CR>',
-            mode = 'n',
-        },
-    }
+	keys = {
+		{
+			"<C-b>",
+			"<Cmd>NvimTreeToggle<CR>",
+			mode = "n",
+		},
+	},
 }

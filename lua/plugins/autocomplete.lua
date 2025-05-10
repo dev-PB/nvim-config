@@ -1,7 +1,7 @@
 return {
-	'saghen/blink.cmp',
-	dependencies = { 'rafamadriz/friendly-snippets' },
-	version = '1.*',
+	"saghen/blink.cmp",
+	dependencies = { "rafamadriz/friendly-snippets" },
+	version = "1.*",
 
 	---@module 'blink.cmp'
 	---@type blink.cmp.Config
@@ -15,13 +15,13 @@ return {
 		-- Enter to accept suggestion
 		-- Tab & Shift-Tab to scroll through them
 		keymap = {
-			preset = 'enter',
+			preset = "enter",
 			["<Tab>"] = { "select_next", "fallback" },
 			["<S-Tab>"] = { "select_prev", "fallback" },
 		},
 
 		appearance = {
-			nerd_font_variant = 'normal'
+			nerd_font_variant = "normal",
 		},
 
 		completion = {
@@ -39,11 +39,12 @@ return {
 		},
 
 		sources = {
-			default = { 'lsp', 'path', 'snippets', 'buffer' },
+			default = { "lsp", "path", "snippets", "buffer" },
 		},
 
-		fuzzy = { implementation = "prefer_rust_with_warning" }
-		},
+		fuzzy = { implementation = "prefer_rust_with_warning" },
+	},
 
-		opts_extend = { "sources.default" },
-  }
+	opts_extend = { "sources.default" },
+}
+
