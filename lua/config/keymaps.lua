@@ -60,14 +60,6 @@ vim.keymap.set(
 	{ noremap = true, silent = true, desc = "Toggle relative line numbers" }
 )
 
--- Toggle hybrid mode (Markview)
-vim.keymap.set(
-	"n",
-	"<Leader>mh",
-	"<Cmd>Markview hybridToggle<CR>",
-	{ noremap = true, silent = true, desc = "Toggle Hybrid mode (Markview)" }
-)
-
 -- Select all
 vim.keymap.set("n", "<C-a>", "ggVG", { silent = true })
 
