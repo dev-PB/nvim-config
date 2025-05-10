@@ -41,7 +41,7 @@ return {
 
 	keys = {
 		{
-			"<C-b>",
+			"<C-M-l>",
 			"<Cmd>NvimTreeToggle<CR>",
 			mode = "n",
 		},
