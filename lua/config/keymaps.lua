@@ -1,7 +1,7 @@
 -- File Search
 local telescope = require("telescope.builtin")
-vim.keymap.set("n", "<C-t>", telescope.find_files, { desc = "Find Files" })
-vim.keymap.set("n", "<Leader>t", telescope.buffers, { desc = "Find Buffers" })
+vim.keymap.set("n", "<C-L>", telescope.find_files, { desc = "Find Files" })
+vim.keymap.set("n", "<Leader>b", telescope.buffers, { desc = "Find Buffers" })
 
 -- LSP
 vim.keymap.set("n", "<M-i>", vim.lsp.buf.hover, { desc = "Hover" })

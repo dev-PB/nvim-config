@@ -21,7 +21,7 @@ vim.opt.showmode = false
 vim.opt.guicursor = ""
 vim.opt.colorcolumn = "120"
 vim.opt.cursorline = true
-vim.opt.cursorlineopt = "number"
+vim.opt.cursorlineopt = "both"
 vim.opt.scrolloff = 5
 vim.opt.fillchars = { eob = " " }
 
