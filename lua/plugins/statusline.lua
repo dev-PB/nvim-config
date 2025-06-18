@@ -6,6 +6,7 @@ return {
 		require("lualine").setup({
 			options = {
 				theme = "vscode",
+				extensions = { "neo-tree" },
 			},
 		})
 	end,
