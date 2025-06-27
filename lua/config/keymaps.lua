@@ -66,3 +66,9 @@ vim.keymap.set("n", "<C-a>", "ggVG", { silent = true })
 -- Go to first/last line
 vim.keymap.set({ "n", "v" }, "<", "gg", { silent = true })
 vim.keymap.set({ "n", "v" }, ">", "G", { silent = true })
+
+-- Delete without coping
+vim.keymap.set({ "n", "v" }, "dd", '"_dd', { noremap = true, silent = true })
+
+-- Cut
+vim.keymap.set({ "n", "v" }, "<C-x>", "dd", { noremap = true, silent = true })
