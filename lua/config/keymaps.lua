@@ -6,7 +6,7 @@ vim.keymap.set("n", "<Leader>b", telescope.buffers, { desc = "Find Buffers" })
 -- LSP
 vim.keymap.set("n", "<M-i>", vim.lsp.buf.hover, { desc = "Hover" })
 vim.keymap.set("n", "<F12>", vim.lsp.buf.definition, { desc = "Go to Definition" })
-vim.keymap.set({ "n", "v" }, "<M-.>", vim.lsp.buf.code_action, { desc = "Code Actions" })
+vim.keymap.set({ "n", "v" }, "<M-.>", require("tiny-code-action").code_action, { desc = "Code Actions" })
 vim.keymap.set({ "n", "i" }, "<S-F12>", telescope.lsp_references, { desc = "Find References" })
 
 -- Comments, <C-_> = <C-/>
