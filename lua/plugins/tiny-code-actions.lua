@@ -8,4 +8,15 @@ return {
 	},
 	event = "LspAttach",
 	opts = {},
+
+	keys = {
+		{
+			"<M-.>",
+			function()
+				require("tiny-code-action").code_action()
+			end,
+			mode = { "n", "v" },
+			desc = "Code Actions",
+		},
+	},
 }
