@@ -7,11 +7,16 @@ vim.opt.swapfile = false
 vim.opt.undofile = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.wrap = false
+vim.opt.ignorecase = true
+vim.opt.path:append({ "**" })
 
 -- Tabs
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
+vim.opt.smartindent = true
+vim.opt.autoindent = true
+vim.opt.smarttab = true
 
 -- Appearance
 vim.opt.title = true
