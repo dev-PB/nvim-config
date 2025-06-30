@@ -5,7 +5,6 @@ vim.g.loaded_netrwPlugin = 1
 -- General
 vim.opt.swapfile = false
 vim.opt.undofile = true
-vim.opt.clipboard = "unnamedplus"
 vim.opt.wrap = false
 vim.opt.ignorecase = true
 vim.opt.path:append({ "**" })

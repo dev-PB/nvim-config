@@ -38,19 +38,6 @@ vim.keymap.set("n", "<M-Down>", ":resize -2<CR>", { noremap = true, silent = tru
 vim.keymap.set("n", "<M-Left>", ":vertical resize -2<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<M-Right>", ":vertical resize +2<CR>", { noremap = true, silent = true })
 
--- Save shortcut, :update only saves if there's been changes, <Esc> to return to normal mode afterwards
-vim.keymap.set({ "n", "i" }, "<C-s>", "<Cmd>update<CR><Esc>", { noremap = true, silent = true })
-
--- From normal mode, add a new line below/above & enter insert mode, <NL> = <C-CR>
-vim.keymap.set("n", "<CR>", "o", { noremap = true, silent = true })
-vim.keymap.set("n", "<NL>", "O", { noremap = true, silent = true })
-
--- From insert mode, add a new line above & return to insert mode, <NL> = <C-CR>
-vim.keymap.set("i", "<NL>", "<C-o>O", { noremap = true, silent = true })
-
--- Undo
-vim.keymap.set({ "n", "i" }, "<C-z>", "<Cmd>u<CR>", { noremap = true, silent = true })
-
 -- Toggle relative line numbers
 vim.keymap.set(
 	"n",
@@ -59,15 +46,6 @@ vim.keymap.set(
 	{ noremap = true, silent = true, desc = "Toggle relative line numbers" }
 )
 
--- Select all
-vim.keymap.set("n", "<C-a>", "ggVG", { silent = true })
-
--- Go to first/last line
-vim.keymap.set({ "n", "v" }, "<", "gg", { silent = true })
-vim.keymap.set({ "n", "v" }, ">", "G", { silent = true })
-
--- Delete without coping
-vim.keymap.set({ "n", "v" }, "dd", '"_dd', { noremap = true, silent = true })
-
--- Cut
-vim.keymap.set({ "n", "v" }, "<C-x>", "dd", { noremap = true, silent = true })
+-- Go to start/end of line
+vim.keymap.set({ "n", "v" }, "gh", "0", { silent = true, desc = "Go to start of line" })
+vim.keymap.set({ "n", "v" }, "gl", "$", { silent = true, desc = "Go to end of line " })
