@@ -1,13 +1,15 @@
 return {
 	{
-		"Mofiqul/vscode.nvim",
-		name = "vscode",
+		"rebelot/kanagawa.nvim",
+		name = "kanagawa",
 		lazy = false,
 
 		config = function()
-			require("vscode").setup()
+			require("kanagawa").setup({
+				compile = true,
+			})
 
-			vim.cmd.colorscheme("vscode")
+			vim.cmd.colorscheme("kanagawa")
 		end,
 	},
 }
