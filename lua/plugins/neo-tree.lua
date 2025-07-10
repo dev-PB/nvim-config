@@ -16,7 +16,7 @@ return {
 	},
 	keys = {
 		{
-			"<C-M-l>",
+			"<C-y>",
 			"<Cmd>Neotree toggle<CR>",
 			mode = "n",
 		},

@@ -18,7 +18,7 @@ return {
 			preset = "enter",
 			["<Tab>"] = { "select_next", "fallback" },
 			["<S-Tab>"] = { "select_prev", "fallback" },
-			["<Esc>"] = { "hide", "fallback" },
+			-- ["<Esc>"] = { "hide", "fallback" },
 		},
 
 		appearance = {
