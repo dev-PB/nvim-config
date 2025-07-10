@@ -1,12 +1,13 @@
 -- File Search
-local telescope = require("telescope.builtin")
-vim.keymap.set("n", "<Leader>f", telescope.find_files, { desc = "Find Files" })
-vim.keymap.set("n", "<Leader>b", telescope.buffers, { desc = "Find Buffers" })
+local fzf = require("fzf-lua")
+vim.keymap.set("n", "<Leader>f", fzf.files, { desc = "Find Files" })
+vim.keymap.set("n", "<Leader>b", fzf.buffers, { desc = "Find Buffers" })
 
 -- LSP
 vim.keymap.set("n", "<Leader>k", vim.lsp.buf.hover, { desc = "Hover" })
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
-vim.keymap.set({ "n", "i" }, "grr", telescope.lsp_references, { desc = "Find References" })
+vim.keymap.set({ "n", "i" }, "grr", fzf.lsp_references, { desc = "Find References" })
+vim.keymap.set("n", "<Leader>a", fzf.lsp_code_actions, { desc = "Code Actions" })
 
 -- Comments, <C-_> = <C-/>
 vim.keymap.set("v", "<Leader>c", "gc", { remap = true, silent = true, desc = "Toggle comment" })
